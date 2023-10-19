@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 373804767529.dkr.ecr.ap-northeast-2.amazonaws.com/mypeccy-web
   newName: 373804767529.dkr.ecr.ap-northeast-2.amazonaws.com/mypeccy-web
-  newTag: abcdefg
+  newTag: 313d0442
 resources:
 - ../../base
 patchesStrategicMerge:
