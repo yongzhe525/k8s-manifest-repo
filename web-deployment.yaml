@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-frontend
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app-frontend
+  template:
+    metadata:
+      labels:
+        app: app-frontend
+    spec:
+      containers:
+        - name: app-frontend
+          image: 373804767529.dkr.ecr.ap-northeast-2.amazonaws.com/mypeccy-web:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

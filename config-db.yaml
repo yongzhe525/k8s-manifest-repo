@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-app
+  namespace: default
+data:
+  MYSQL_USER: "admin"
+  MYSQL_PASSWORD: "adminadmin"
+  MYSQL_URL: "eks-demo-database-instance-1.c6pusae72oi5.ap-northeast-2.rds.amazonaws.com"
+  MYSQL_PORT: "3306"
+  MYSQL_DB_NAME: "peccy"

@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-backend
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app-backend
+  template:
+    metadata:
+      labels:
+        app: app-backend
+    spec:
+      containers:
+        - name: app-backend
+          image: 373804767529.dkr.ecr.ap-northeast-2.amazonaws.com/mypeccy-app:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MYSQL_USER
+              value: "admin"
+            - name: MYSQL_PASSWORD
+              value: "adminadmin"
+            - name: MYSQL_URL
+              value: "eks-demo-database-instance-1.c6pusae72oi5.ap-northeast-2.rds.amazonaws.com"
+            - name: MYSQL_PORT
+              value: "3306"
+            - name: MYSQL_DB_NAME
+              value: "peccy"
