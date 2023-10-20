@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app-frontend
-          image: 373804767529.dkr.ecr.ap-northeast-2.amazonaws.com/mypeccy-web:latest
+          image: 373804767529.dkr.ecr.ap-northeast-2.amazonaws.com/mypeccy-web:51108843
           imagePullPolicy: Always
           ports:
             - containerPort: 80
