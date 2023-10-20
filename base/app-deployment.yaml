@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app-backend
-          image: 373804767529.dkr.ecr.ap-northeast-2.amazonaws.com/mypeccy-app:51108843
+          image: 373804767529.dkr.ecr.ap-northeast-2.amazonaws.com/mypeccy-app:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
